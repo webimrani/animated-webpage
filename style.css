@@ -1,0 +1,143 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px 10%;
+    background-image: url(images/back-image.png);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  nav {
+   padding: 10px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+  }
+
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .btn-login {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    font: 400;
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    border-radius: 30px;
+    font-size: 14px;
+    transition: .5s;
+  }
+
+  .content {
+    margin-top: 10% ;
+    max-width: 600px;
+  }
+
+  .content h1 {
+    font-size: 70px;
+    color: #222;
+  }
+
+.content p {
+    margin: 10px 0 30px;
+    animation-delay: .5s;
+}
+
+.content .btn {
+    padding: 15px 70px;
+    animation-delay: 1s
+
+}
+
+.btn:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.img-feature {
+    width: 530px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    top: 10%;
+}
+.img-feature.delay{
+    animation-delay: 1.5s;
+}
+.delay {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear  forwards;
+}
+
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
